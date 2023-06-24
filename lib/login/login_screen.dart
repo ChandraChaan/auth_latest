@@ -6,8 +6,8 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var _controller = TextEditingController();
-    var _controllerpw = TextEditingController();
+    var controller = TextEditingController();
+    var controllerpw = TextEditingController();
 
     return Scaffold(
         body: Container(
@@ -28,13 +28,13 @@ class LoginScreen extends StatelessWidget {
                   Image.network("https://images.pexels.com/photos/2899097/pexels-photo-2899097.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"),      Padding(
         padding: const EdgeInsets.all(10.0),
         child: TextField(
-          controller: _controller,
+          controller: controller,
           decoration: InputDecoration(
             border: OutlineInputBorder(),
             hintText: 'Enter Login-ID',
             labelText: 'Login-ID',
             suffixIcon: IconButton(
-              onPressed: _controller.clear,
+              onPressed: controller.clear,
               icon: Icon(Icons.clear),
             ),
           ),
@@ -43,14 +43,14 @@ class LoginScreen extends StatelessWidget {
       Padding(
         padding: const EdgeInsets.all(10.0),
         child: TextField(
-          controller: _controllerpw,
+          controller: controllerpw,
           obscureText: true,
           decoration: InputDecoration(
             border: OutlineInputBorder(),
             hintText: 'Enter password',
             labelText: 'password',
             suffixIcon: IconButton(
-              onPressed: _controllerpw.clear,
+              onPressed: controllerpw.clear,
               icon: Icon(Icons.clear),
             ),
           ),
